@@ -13,7 +13,7 @@ code {
 }
 
 .icon-container {
-  padding: 10vw 0 0 0;
+  padding: 5vw 0 0 0;
 }
 
 .menu-icon-image {
@@ -94,6 +94,12 @@ code {
   transform: translate(0, -2%);
 }
 
-.icon.becomeNav {
-  transform: translate(50px,100px) !important;
+.clickTransform.becomeNav {
+  animation: moveUp 2s;
+  transform: translate(0, -25%) scale(0.6, 0.6);
 }
+
+@keyframes moveUp { 
+  0% { transform: translate(0, 0) scale(1, 1); }
+  100%   { transform: translate(0, -25%) scale(0.6, 0.6); }     
+} 

@@ -5,7 +5,7 @@ import Nav from "../Nav/Nav";
 import styled from "styled-components";
 
 const StyledBackground = styled.div`
-  display: flex;
+  display: fixed;
   flex-direction: column;
   align-items: center;
   background-image: url('${backgroundOne}');
@@ -13,7 +13,7 @@ const StyledBackground = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  // height: 100%;
+  height: 100%;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: repeat;
@@ -24,7 +24,9 @@ const StyledBackground = styled.div`
 function MainPage() {
   return (  
     <StyledBackground>
-      <Nav />
+      <div id="nav" className="clickTransform">
+        <Nav />
+      </div>
     </StyledBackground>
   );
 }
