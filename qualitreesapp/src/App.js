@@ -1,10 +1,14 @@
 import React from "react";
 import './App.css';
-import Nav from "./components/Nav/Nav";
+import MainPage from "./components/MainPage/MainPage.js";
+import Footer from "./components/Footer/Footer.js";
 
 function App() {
   return (
-    <Nav />
+    <div>
+      <MainPage />
+      <Footer />
+    </div>
   );
 }
 

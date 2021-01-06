@@ -13,7 +13,7 @@ code {
 }
 
 .icon-container {
-  padding: 30vh 0 30vh 0;
+  padding: 10vw 0 0 0;
 }
 
 .menu-icon-image {
@@ -92,4 +92,8 @@ code {
   background-size: 85%;
   background-repeat: no-repeat;
   transform: translate(0, -2%);
+}
+
+.icon.becomeNav {
+  transform: translate(50px,100px) !important;
 }
