@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer.js";
 
 function App() {
   return (
-    <div>
+    <div className="fade-in">
       <MainPage />
       <Footer />
     </div>

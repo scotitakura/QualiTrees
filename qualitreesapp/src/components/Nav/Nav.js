@@ -12,14 +12,7 @@ import Products from "../../pages/Products.js";
 import Wisdom from "../../pages/Wisdom.js";
 import FAQ from "../../pages/FAQ.js";
 
-// import styled from "styled-components";
-
-// const StyledIcons = styled.img`
-  // position: absolute;
-  // height: 50vh;
-  // width: 33vh;
-  // padding: 10vh;
-// `
+import styled from "styled-components";
 
 function Nav() {
   function aboutClick() {
@@ -29,6 +22,9 @@ function Nav() {
   function productsClick() {
     const mainToNav = document.getElementById("nav");
     mainToNav.className += " becomeNav";
+  };
+  function mainClick() {
+    window.location.href="/"
   };
   function wisdomClick() {
     const mainToNav = document.getElementById("nav");
@@ -41,43 +37,43 @@ function Nav() {
 
   return (
     <Router>
-      <div class="icon-container">
-        <div class="row valign-wrapper">
-          <Link to="/about" class="icon menu-icon outer-icon left-icon about-icon col s2 center-align" onClick={aboutClick}>
-            <img class="menu-icon-image center-align" src={aboutIcon} alt="QualiTrees Logo" />
-          </Link>
+        <div id="nav" class="icon-container clickTransform">
+          <div class="row valign-wrapper">
+            <Link to="/about" class="icon menu-icon outer-icon left-icon about-icon col s2 center-align" onClick={aboutClick}>
+              <img class="menu-icon-image center-align" src={aboutIcon} alt="QualiTrees Logo" />
+            </Link>
 
-          <Link to="/products" class="icon menu-icon left-icon products-icon col s2" onClick={productsClick}>
-            <img class="menu-icon-image center-aligned" src={productsIcon} alt="Products Icon" />
-          </Link>
+            <Link to="/products" class="icon menu-icon left-icon products-icon col s2" onClick={productsClick}>
+              <img class="menu-icon-image center-aligned" src={productsIcon} alt="Products Icon" />
+            </Link>
 
-          <Link to="/" class="icon primary-icon col s4">
-            <img class="background-icon" src={shineLogo} alt="QualiTrees Logo" />
-          </Link>
+            <Link to="/" class="icon primary-icon col s4" onClick={mainClick}>
+              <img class="background-icon" src={shineLogo} alt="QualiTrees Logo" />
+            </Link>
 
-          <Link to="/wisdom" class="icon menu-icon right-icon wisdom-icon col s2" onClick={wisdomClick}>
-            <img class="menu-icon-image center-aligned" src={wisdomIcon} alt="QualiTrees Logo" />
-          </Link>
+            <Link to="/wisdom" class="icon menu-icon right-icon wisdom-icon col s2" onClick={wisdomClick}>
+              <img class="menu-icon-image center-aligned" src={wisdomIcon} alt="QualiTrees Logo" />
+            </Link>
 
-          <Link to="/faq" class="icon menu-icon outer-icon right-icon faq-icon col s2" onClick={faqClick}>
-            <img class="menu-icon-image center-aligned" src={faqIcon} alt="QualiTrees Logo" />
-          </Link>
-        </div>
+            <Link to="/faq" class="icon menu-icon outer-icon right-icon faq-icon col s2" onClick={faqClick}>
+              <img class="menu-icon-image center-aligned" src={faqIcon} alt="QualiTrees Logo" />
+            </Link>
+          </div>
       </div>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/products">
-            <Products />
-          </Route>
-          <Route path="/wisdom">
-            <Wisdom />
-          </Route>
-          <Route path="/faq">
-            <FAQ />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/products">
+          <Products />
+        </Route>
+        <Route path="/wisdom">
+          <Wisdom />
+        </Route>
+        <Route path="/faq">
+          <FAQ />
+        </Route>
+      </Switch>
     </Router>
 
   );
