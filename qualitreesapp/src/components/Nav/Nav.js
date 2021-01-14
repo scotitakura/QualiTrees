@@ -37,8 +37,8 @@ function Nav() {
 
   return (
     <Router>
-        <div id="nav" class="icon-container clickTransform">
-          <div class="row valign-wrapper">
+        <div class="icon-container">
+          <div id="nav" class="row valign-wrapper clickTransform">
             <Link to="/about" class="icon menu-icon outer-icon left-icon about-icon col s2 center-align" onClick={aboutClick}>
               <img class="menu-icon-image center-align" src={aboutIcon} alt="QualiTrees Logo" />
             </Link>
@@ -59,7 +59,6 @@ function Nav() {
               <img class="menu-icon-image center-aligned" src={faqIcon} alt="QualiTrees Logo" />
             </Link>
           </div>
-      </div>
       <Switch>
         <Route path="/about">
           <About />
@@ -74,6 +73,7 @@ function Nav() {
           <FAQ />
         </Route>
       </Switch>
+      </div>
     </Router>
 
   );

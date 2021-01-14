@@ -7,7 +7,9 @@ import styled from "styled-components";
 const StyledBackground = styled.div`
   display: flex;
   background-image: url('${backgroundOne}');
-  background-size: 100%;
+  background-size: 100vh;
+  height: 100%;
+  width: 100%;
 `
 
 function MainPage() {

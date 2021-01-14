@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
+  background-color: #A29169;
 `;
 
 const StyledFlexDiv = styled.div`

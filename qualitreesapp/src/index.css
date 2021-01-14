@@ -99,13 +99,42 @@ code {
 
 .clickTransform.becomeNav {
   animation: moveUp 2s;
-  transform: translate(0, -23%) scale(0.6, 0.6);
+  transform: translate(0, -23%) scale(0.6);
+  margin-bottom: -20%;
 }
 
 @keyframes moveUp { 
-  0% { transform: translate(0, 0) scale(1, 1); }
-  100%   { transform: translate(0, -23%) scale(0.6, 0.6); }     
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(0, -23%) scale(0.6); }     
 } 
+
+.becomeNav .menu-icon {
+  animation: grow 2s;
+  transform: scale(2);
+}
+
+.becomeNav .about-icon {
+  animation: grow 2s;
+  transform: scale(2) translateX(-20%);
+
+}
+.becomeNav .products-icon {
+  animation: floating 6s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+.becomeNav .wisdom-icon {
+  animation: floating 5s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+.becomeNav .faq-icon {
+  animation: floating 6.5s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(2) translateX(-20%); }
+}
 
 .fade-in {
   animation: fadeIn ease 3s;
