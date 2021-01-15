@@ -37,8 +37,8 @@ function Nav() {
 
   return (
     <Router>
-        <div class="icon-container">
-          <div id="nav" class="row valign-wrapper clickTransform">
+        <div class="column-container">
+          <div id="nav" class="row valign-wrapper clickTransform icon-container">
             <Link to="/about" class="icon menu-icon outer-icon left-icon about-icon col s2 center-align" onClick={aboutClick}>
               <img class="menu-icon-image center-align" src={aboutIcon} alt="QualiTrees Logo" />
             </Link>
