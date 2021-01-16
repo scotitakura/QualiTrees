@@ -115,7 +115,7 @@ code {
 
 @keyframes moveUp { 
   0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(0, -30%) scale(0.5); }     
+  100% { transform: translate(0, -30%) scale(0.5); }
 } 
 
 /* .becomeNav .menu-icon {
@@ -124,10 +124,9 @@ code {
 } */
 
 .becomeNav .about-icon {
-  /* animation: about-grow 2s forwards, floating2 5.5s linear infinite; */
-  transition: all 5.5s;
+  animation: about-grow 2s forwards, floating2 5.5s ease-in-out infinite;
+  /* transition: transform 5.5s; */
   transform: scale(1.4) translateX(-120%);
-  animation-timing-function: ease-in-out;
 }
 .becomeNav .products-icon {
   animation: products-grow 2s;
