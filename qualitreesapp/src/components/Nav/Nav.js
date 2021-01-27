@@ -40,11 +40,11 @@ function Nav() {
         <div class="column-container">
           <div id="nav" class="row valign-wrapper clickTransform icon-container">
             <Link to="/about" class="icon menu-icon outer-icon left-icon about-icon col s2 center-align" onClick={aboutClick}>
-              <img class="menu-icon-image center-align" src={aboutIcon} alt="QualiTrees Logo" />
+              <img class="menu-icon-image " src={aboutIcon} alt="QualiTrees Logo" />
             </Link>
 
             <Link to="/products" class="icon menu-icon left-icon products-icon col s2" onClick={productsClick}>
-              <img class="menu-icon-image center-aligned" src={productsIcon} alt="Products Icon" />
+              <img class="menu-icon-image" src={productsIcon} alt="Products Icon" />
             </Link>
 
             <Link to="/" class="icon primary-icon col s4" onClick={mainClick}>
@@ -52,11 +52,11 @@ function Nav() {
             </Link>
 
             <Link to="/wisdom" class="icon menu-icon right-icon wisdom-icon col s2" onClick={wisdomClick}>
-              <img class="menu-icon-image center-aligned" src={wisdomIcon} alt="QualiTrees Logo" />
+              <img class="menu-icon-image" src={wisdomIcon} alt="QualiTrees Logo" />
             </Link>
 
             <Link to="/faq" class="icon menu-icon outer-icon right-icon faq-icon col s2" onClick={faqClick}>
-              <img class="menu-icon-image center-aligned" src={faqIcon} alt="QualiTrees Logo" />
+              <img class="menu-icon-image" src={faqIcon} alt="QualiTrees Logo" />
             </Link>
           </div>
       <Switch>

@@ -111,6 +111,8 @@ code {
   animation: moveUp 2s;
   transform: translate(0, -30%) scale(0.5);
   margin-bottom: -20%;
+  /* height: 100vw !important; */
+  /* width: 150vw !important; */
 }
 
 @keyframes moveUp { 
@@ -118,14 +120,13 @@ code {
   100% { transform: translate(0, -30%) scale(0.5); }
 } 
 
-/* .becomeNav .menu-icon {
+.becomeNav .menu-icon {
   animation: grow 2s;
   transform: scale(2);
-} */
+}
 
 .becomeNav .about-icon {
   animation: about-grow 2s forwards, floating2 5.5s ease-in-out infinite;
-  /* transition: transform 5.5s; */
   transform: scale(1.4) translateX(-120%);
 }
 .becomeNav .products-icon {
