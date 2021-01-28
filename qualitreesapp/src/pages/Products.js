@@ -26,9 +26,9 @@ const ProductsParagraph = styled.p`
 
 function Products() {
   return (
-    <ProductsSection className="fade-in">
-      <ProductsWordDiv />
-      <ProductsParagraph> 
+    <ProductsSection>
+      <ProductsWordDiv className="fade-in" />
+      <ProductsParagraph className="fade-in-delay"> 
         Link to Shopify?
       </ProductsParagraph>
     </ProductsSection>

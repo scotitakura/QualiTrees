@@ -26,9 +26,9 @@ const FAQParagraph = styled.p`
 
 function FAQ() {
   return (
-    <FAQSection className="fade-in">
-      <FAQWordDiv />
-      <FAQParagraph> 
+    <FAQSection>
+      <FAQWordDiv className="fade-in"/>
+      <FAQParagraph className="fade-in-delay"> 
         How do you want this to be?
       </FAQParagraph>
     </FAQSection>

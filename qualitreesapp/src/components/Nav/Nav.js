@@ -18,10 +18,12 @@ function Nav() {
   function aboutClick() {
     const mainToNav = document.getElementById("nav");
     mainToNav.className += " becomeNav";
+    setTimeout(() => (mainToNav.className += " startFloat"), 2000)
   };
   function productsClick() {
     const mainToNav = document.getElementById("nav");
     mainToNav.className += " becomeNav";
+    setTimeout(() => (mainToNav.className += " startFloat"), 2000)
   };
   function mainClick() {
     window.location.href="/"
@@ -29,10 +31,12 @@ function Nav() {
   function wisdomClick() {
     const mainToNav = document.getElementById("nav");
     mainToNav.className += " becomeNav";
+    setTimeout(() => (mainToNav.className += " startFloat"), 2000)
   };
   function faqClick() {
     const mainToNav = document.getElementById("nav");
     mainToNav.className += " becomeNav";
+    setTimeout(() => (mainToNav.className += " startFloat"), 2000)
   };
 
   return (
@@ -61,15 +65,19 @@ function Nav() {
           </div>
       <Switch>
         <Route path="/about">
+          <hr className="fade-in-hrdelay"/>
           <About />
         </Route>
         <Route path="/products">
+          <hr className="fade-in-hrdelay"/>
           <Products />
         </Route>
         <Route path="/wisdom">
+          <hr className="fade-in-hrdelay"/>
           <Wisdom />
         </Route>
         <Route path="/faq">
+          <hr className="fade-in-hrdelay"/>
           <FAQ />
         </Route>
       </Switch>

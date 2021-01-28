@@ -26,9 +26,9 @@ const AboutParagraph = styled.p`
 
 function About() {
   return (
-    <AboutSection className="fade-in">
-      <AboutWordDiv />
-      <AboutParagraph>Some long blurb about your comapny and your products blah
+    <AboutSection>
+      <AboutWordDiv className="fade-in"/>
+      <AboutParagraph className="fade-in-delay">Some long blurb about your comapny and your products blah
         blah blah blah blah blah blah blah blah blah blah blah blah
         blah blah blah blah blah blah blah blah blah blah blah blah
         blah blah blah blah blah blah blah blah blah blah blah blah

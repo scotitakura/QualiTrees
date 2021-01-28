@@ -26,9 +26,9 @@ const WisdomParagraph = styled.p`
 
 function Wisdom() {
   return (
-    <WisdomSection className="fade-in">
-      <WisdomWordDiv />
-      <WisdomParagraph>Some long blurb about your comapny and your products blah
+    <WisdomSection>
+      <WisdomWordDiv className="fade-in" />
+      <WisdomParagraph className="fade-in-delay">Some long blurb about your comapny and your products blah
         blah blah blah blah blah blah blah blah blah blah blah blah
         blah blah blah blah blah blah blah blah blah blah blah blah
         blah blah blah blah blah blah blah blah blah blah blah blah

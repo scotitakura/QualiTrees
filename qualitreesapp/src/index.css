@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+hr {
+  width: 80% !important;
+}
+
 .column-container {
   padding: 5vw 0 0 0;
 }
@@ -38,25 +42,28 @@ code {
 }
 
 .about-icon {
-  animation: floating 5.5s linear infinite;
+  animation: floating 4s linear infinite;
   animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
 }
 .products-icon {
-  animation: floating 6s linear infinite;
+  animation: floating 3.5s linear infinite;
   animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
 .wisdom-icon {
-  animation: floating 5s linear infinite;
+  animation: floating 3s linear infinite;
   animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
 }
 .faq-icon {
-  animation: floating 6.5s linear infinite;
+  animation: floating 4.5s linear infinite;
   animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
 @keyframes floating { 
-  0% { transform: translate(0,  0px); } 
-  50%  { transform: translate(0, 15px); } 
-  100%   { transform: translate(0, -0px); }     
+  0% { transform: translate(0,  0px); }
+  100%   { transform: translate(0, 15px); }     
 } 
 
 .row .col {
@@ -107,28 +114,99 @@ code {
   background-repeat: no-repeat;
 }
 
+.becomeNav .primary-icon {
+  animation: grow 2s;
+  transform: scale(1.2);
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
 .clickTransform.becomeNav {
   animation: moveUp 2s;
-  transform: translate(0, -30%) scale(0.5);
-  margin-bottom: -20%;
-  /* height: 100vw !important; */
-  /* width: 150vw !important; */
+  transform: translate(0, -28%) scale(0.5);
+  margin-bottom: -18%;
 }
 
 @keyframes moveUp { 
   0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(0, -30%) scale(0.5); }
+  100% { transform: translate(0, -28%) scale(0.5); }
 } 
 
-.becomeNav .menu-icon {
-  animation: grow 2s;
-  transform: scale(2);
-}
-
 .becomeNav .about-icon {
-  animation: about-grow 2s forwards, floating2 5.5s ease-in-out infinite;
+  animation: about-grow 2s;
   transform: scale(1.4) translateX(-120%);
 }
+@keyframes about-grow {
+  0% { transform: scale(1) translateX(0%); }
+  100% { transform: scale(1.4) translateX(-120%); }
+}
+.startFloat .about-icon {
+  animation: about-floating 4s ease-in-out infinite;
+  animation-direction: alternate;
+  transform: scale(1.4) translate(-120%, 0%);
+}
+@keyframes about-floating { 
+  0% { transform: scale(1.4) translate(-120%,  0%); }
+  100%   { transform: scale(1.4) translate(-120%, 15px); }
+}
+
+.becomeNav .products-icon {
+  animation: products-grow 2s;
+  transform: scale(1.4) translateX(-50%);
+}
+@keyframes products-grow {
+  0% { transform: scale(1) translateX(0%); }
+  100% { transform: scale(1.4) translateX(-50%); }
+}
+.startFloat .products-icon {
+  animation: products-floating 3.5s ease-in-out infinite !important;
+  animation-direction: alternate !important;
+  transform: scale(1.4) translate(-50%, 0%);
+}
+@keyframes products-floating { 
+  0% { transform: scale(1.4) translate(-50%,  0%); }
+  100%   { transform: scale(1.4) translate(-50%, 15px); }
+} 
+
+.becomeNav .wisdom-icon {
+  animation: wisdom-grow 2s;
+  transform: scale(1.4) translateX(50%);
+}
+@keyframes wisdom-grow {
+  0% { transform: scale(1) translateX(0%); }
+  100% { transform: scale(1.4) translateX(50%); }
+}
+.startFloat .wisdom-icon {
+  animation: wisdom-floating 3s ease-in-out infinite !important;
+  animation-direction: alternate !important;
+  transform: scale(1.4) translate(50%, 0%);
+}
+@keyframes wisdom-floating { 
+  0% { transform: scale(1.4) translate(50%,  0%); }
+  100%   { transform: scale(1.4) translate(50%, 15px); }
+} 
+
+.becomeNav .faq-icon {
+  animation: faq-grow 2s;
+  transform: scale(1.4) translateX(120%);
+}
+@keyframes faq-grow {
+  0% { transform: scale(1) translateX(0%); }
+  100% { transform: scale(1.4) translateX(120%); }
+}
+.startFloat .faq-icon {
+  animation: faq-floating 4.5s ease-in-out infinite !important;
+  animation-direction: alternate !important;
+  transform: scale(1.4) translate(120%, 0%);
+}
+@keyframes faq-floating { 
+  0% { transform: scale(1.4) translate(120%,  0%); }
+  100%   { transform: scale(1.4) translate(120%, 15px); }
+} 
+
 .becomeNav .products-icon {
   animation: products-grow 2s;
   transform: scale(1.4) translateX(-50%);
@@ -140,11 +218,6 @@ code {
 .becomeNav .faq-icon {
   animation: faq-grow 2s;
   transform: scale(1.4) translateX(120%);
-}
-
-@keyframes about-grow {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.4) translateX(-120%); }
 }
 
 @keyframes products-grow {
@@ -162,15 +235,22 @@ code {
   100% { transform: scale(1.4) translateX(120%); }
 }
 
-@keyframes floating2 { 
-  0% { transform: translate(0%,  0%); } 
-  50%  { transform: translate(0%, 15%); } 
-  100%   { transform: translate(0%, -0px); }     
-} 
 
 .fade-in {
   animation: fadeIn ease 3s;
   animation-fill-mode: forwards; 
+}
+.fade-in-delay {
+  animation: fadeIn ease 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+}
+.fade-in-hrdelay {
+  animation: fadeIn ease 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; 
+  opacity: 0;
 }
 
 @keyframes fadeIn {
