@@ -43,13 +43,7 @@ function Footer() {
           <StyledP>About</StyledP>
               <hr/>
             <p className="text-center">
-              Here at Garage Collage, we are trying to help the lives of people
-              in the COVID-19 pandemic by allowing them to safely and
-              effectively host a garage sale over our platform. Whether you're
-              trying to make money off of bulk things that you may not need, or
-              you're looking to purchase some things at a possibly lower retail
-              price or find something antique, Garage Collage is the place for
-              you!
+              Addresses/contact information, social media information, email signup
             </p>
           </StyledFlexItem>
 
