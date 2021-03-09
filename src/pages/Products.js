@@ -29,7 +29,7 @@ function Products() {
     <ProductsSection>
       <ProductsWordDiv className="fade-in" />
       <ProductsParagraph className="fade-in-delay"> 
-        Link to Shopify?
+        <a href="https://www.wpdispensary.com/">Link</a>
       </ProductsParagraph>
     </ProductsSection>
   );
