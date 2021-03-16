@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import backgroundTwo from "../../assets/images/background2.jpg"
+import wood from "../../assets/images/brown.jpg"
 
 const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
-  background-color: #A29169;
+  // background-color: #A29169;
+  // border-top-style: solid;
+  background-image: url('${wood}');
+  background-size: 70vh;
+  height: 100%;
+  width: 100%;
 `;
 
 const StyledFlexDiv = styled.div`
@@ -51,7 +58,7 @@ function Footer() {
           <StyledP>Who We Are</StyledP>
               <hr/>
             <ul className="footer-links">
-              <StyledP>Scot Itakura</StyledP>
+              <StyledP>Glen Itakura</StyledP>
               <StyledHrSI/>
               <li><a href="https://www.linkedin.com/in/scot-itakura-289376157/">Linkedin</a></li>
               <li><a href="https://github.com/scotitakura">Github</a></li>
