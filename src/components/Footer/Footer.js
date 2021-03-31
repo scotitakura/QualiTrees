@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import backgroundTwo from "../../assets/images/background2.jpg"
-import wood from "../../assets/images/brown.jpg"
+import wood from "../../assets/images/jp3.jpg"
 
 const StyledFooter = styled.footer`
   justify-content: center;
@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
   // background-color: #A29169;
   // border-top-style: solid;
   background-image: url('${wood}');
-  background-size: 70vh;
+  background-size: 50%;
   height: 100%;
   width: 100%;
 `;
