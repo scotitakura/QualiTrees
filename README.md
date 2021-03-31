@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Corporate Website: QualiTrees
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](src/assets/images/home-page-example.png)
+![](src/assets/images/about-us-example.png)
 
-## Available Scripts
+## Purpose
+An corporations application to show potential clients an overview of the company of QualiTrees. This platform is the companies business card, allowing users to learn more about QualiTrees and why it is a successful and reliable business for everyday cannabis use.
 
-In the project directory, you can run:
+## Features
+When the user loads the site, they view a homepage with the QualiTrees logo in the center that has animated floating logos on either side titled: About Us, Products, Wisdom, and FAQ. When the user clicks on one of the logos, then the menu shifts upward and shrinks, becoming the websites navigation bar and revealing that tabs information underneath. When the user hovers over the main center logo, it appears to shine. When clicked, it brings the user back to the home page.
 
-### `yarn start`
+The About Us tab displays texts describing the company. The Products tab displays the companies products and how to purchase them. The Wisdom tab displays the benefits of cannabis. The FAQ tab has accordian style menu where when a tab is clicked, it displays text and closses all other tabs in the accordion.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There is also a footer at the bottom of all the pages where uses can find ways to contact the company, as well as find their storefront and address.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Built With
+* React JS
+* JavaScript
+* Node JS
+* Styled Components
+* Materialize
 
-### `yarn test`
+## Usage
+To run program: npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployed Application
+https://qualitrees-503dd.web.app/
 
-### `yarn build`
+## Project Status
+In progress and working at the clients desired pace.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution
+Scot Itakura
