@@ -1,7 +1,7 @@
 # Corporate Website: QualiTrees
 
-![](src/assets/images/home-page-example.png)
-![](src/assets/images/about-us-example.png)
+![](src/assets/images/home-page-example.PNG)
+![](src/assets/images/about-us-example.PNG)
 
 ## Purpose
 An corporations application to show potential clients an overview of the company of QualiTrees. This platform is the companies business card, allowing users to learn more about QualiTrees and why it is a successful and reliable business for everyday cannabis use.
