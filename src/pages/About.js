@@ -5,8 +5,8 @@ import styled from "styled-components";
 const AboutWordDiv = styled.div`
   background-image: url(${AboutWord});
   background-size: 100% 100%;
-  height: 12vh;
-  width: 35vh;
+  height: 120px;
+  width: 350px;
   margin: 0 0 0 10% !important;
   border-style: none none double none;
   border-color: #1b5d45;
@@ -29,17 +29,17 @@ function About() {
     <AboutSection>
       <AboutWordDiv className="fade-in" />
       <AboutParagraph className="fade-in-delay">
-        QualiTrees was born from two enthusiastic California Cannabis
+        QualiTrees was born from two enthusiastic California cannabis
         connoisseurs on a mission to exclusively provide phenomenal clean
-        organic California Cannabis. We are dedicated to curing our patients
+        organic California cannabis. We are dedicated to curing our patients
         mind, body, and soul through supplying exceptionally medicinal quality
         trees. Our half Californian half Japanese founders apply their mindful
         Japanese heritage and their OG Californian culture to blend the pure and
-        wonderful world of Cannabis together. From the beginning of time, our
+        wonderful world of cannabis together. From the beginning of time, our
         members have enthusiastically believed in the transformative healing
-        powers of Cannabis. Our main goal is to pass on these mindful benefits
+        powers of cannabis. Our main goal is to pass on these mindful benefits
         of this beautiful plant by providing extraordinary 100% organic health
-        conscious Cannabis products. We have spent over a decade obsessively
+        conscious cannabis products. We have spent over a decade obsessively
         exploring ways to optimily consume cannabis and are positively thrilled
         to share nature’s essential blessings of longevity and euphoria with
         you. 

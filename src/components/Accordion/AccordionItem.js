@@ -9,12 +9,12 @@ import {
 
 const FAQAccordionItem = ({ item }) => (
   <AccordionItem>
-    <AccordionItemHeading key={item.question}>
+    <AccordionItemHeading key={item.question} className="faq__question">
       <AccordionItemButton>
-          {item.question}
+        {item.question}
       </AccordionItemButton>
     </AccordionItemHeading>
-    <AccordionItemPanel>
+    <AccordionItemPanel className="faq__answer">
     {item.answer}
     </AccordionItemPanel>
   </AccordionItem>

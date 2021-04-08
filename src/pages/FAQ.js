@@ -58,8 +58,8 @@ const FAQData = [
 const FAQWordDiv = styled.div`
   background-image: url(${FAQWord});
   background-size: 100% 100%;
-  height: 10vh;
-  width: 20vh;
+  height: 120px;
+  width: 250px;
   margin: 0 0 0 10% !important;
   border-style: none none double none;
   border-color: #1b5d45;

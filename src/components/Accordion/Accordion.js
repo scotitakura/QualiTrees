@@ -10,6 +10,9 @@ const Accordion2 = ({ questionsAnswers }) => {
     const ariaExpanded = index === activeIndex ? "true" : "false";
     return (
       <FAQAccordionItem
+        showDescription={showDescription}
+        fontWeightBold={fontWeightBold}
+        ariaExpanded={ariaExpanded}
         item={item}
         index={index}
         onClick={() => {
@@ -20,8 +23,8 @@ const Accordion2 = ({ questionsAnswers }) => {
   });
 
   return (
-    <div>
-      <dl>{renderedQuestionsAnswers}</dl>
+    <div className="faq">
+      <dl className="faq__list">{renderedQuestionsAnswers}</dl>
     </div>
   );
 };
