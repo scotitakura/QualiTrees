@@ -9,15 +9,18 @@ import {
 
 const FAQAccordionItem = ({ item }) => (
   <AccordionItem>
-    <AccordionItemHeading key={item.question} className="faq__question">
-      <AccordionItemButton>
-        {item.question}
-      </AccordionItemButton>
-    </AccordionItemHeading>
-    <AccordionItemPanel className="faq__answer">
-    {item.answer}
+        <AccordionItemHeading key={item.question} className="faq__question">
+          <AccordionItemButton className="row">
+          <div className="col s3 q-a-header">Q. &nbsp; </div>
+          <div className="col s9">{item.question}</div>
+          </AccordionItemButton>
+        </AccordionItemHeading>
+    <AccordionItemPanel className="faq__answer row">
+    <div className="col s3 q-a-header">A. &nbsp; </div>
+    <div className="col s9">{item.answer}</div>
     </AccordionItemPanel>
+    <hr/>
   </AccordionItem>
-);
+);  
 
 export default FAQAccordionItem;

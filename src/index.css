@@ -267,7 +267,6 @@ hr {
   100% { transform: scale(1.4) translateX(120%); }
 }
 
-
 .fade-in {
   animation: fadeIn ease 3s;
   animation-fill-mode: forwards; 
@@ -297,45 +296,16 @@ hr {
 /* FAQ */
 .faq {
   width: 100%;
-  padding-top: 65px;
-  padding-bottom: 80px;
 }
-
 .faq__question {
   margin-right: 20%;
-  border-bottom: 1px solid;
-  margin-bottom: 5px;
-  margin-top: 50px;
-  padding-bottom: 15px;
+  padding-top: 15px;
 }
-
 .faq__answer {
   margin-right: 20%;
-  max-width: 100%;
-
 }
-
-.faq__question-button::after {
-  content: "\2BC7";
-  margin-right: 17px;
-  transform: rotate(90deg);
-}
-
-.faq__desc {
-    margin-left: -40px;
-    padding-right: 17px;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 0;
-    overflow: hidden;
-    transition: all 200ms ease-out;
-}
-/* closed */
-.faq__question-button::after {
-  transition: transform 300ms ease-out;
-}
-
-/* open */
-.font-weight-bold::after {
-  transform: rotate(720deg);
+.q-a-header {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 0 5px;
 }
