@@ -11,6 +11,8 @@ import About from "../../pages/About.js";
 import Products from "../../pages/Products.js";
 import Wisdom from "../../pages/Wisdom.js";
 import FAQ from "../../pages/FAQ.js";
+import TermsConditions from "../../pages/TermsConditions.js";
+import PrivacyPolicy from "../../pages/PrivacyPolicy.js";
 
 import styled from "styled-components";
 
@@ -121,6 +123,14 @@ function Nav() {
           <Route path="/faq">
             <hr className="fade-in-hrdelay" />
             <FAQ />
+          </Route>
+          <Route path="/terms-and-conditions">
+            <hr className="fade-in-hrdelay" />
+            <TermsConditions />
+          </Route>
+          <Route path="/privacy-policy">
+            <hr className="fade-in-hrdelay" />
+            <PrivacyPolicy />
           </Route>
         </Switch>
       </SContents>

@@ -1,20 +1,9 @@
 import React from "react";
 import FAQWord from "../assets/images/faq-word-edit.png";
 import styled from "styled-components";
-import Accordion2 from "../components/Accordion/Accordion.js";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
+import AccordionDiv from "../components/Accordion/Accordion.js";
+import { Accordion } from "react-accessible-accordion";
 
-const shipLink =
-  "https://blog.plainjane.com/legal-status-of-cbd-around-the-world/";
-const shipHyperLink = shipLink.link(
-  "https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
-);
 const FAQData = [
   {
     question: "How can I order from the QualiTrees website?",
@@ -36,7 +25,7 @@ const FAQData = [
   {
     question: "Are all QualiTrees products organic?",
     answer:
-      "Yes, we take pride in providing purely 100% organic cannabis, edibles, tinctures, and vapes. All of our merchandise is made from organic Hemp. ",
+      "Yes, we take pride in providing purely 100% organic cannabis, edibles, tinctures, and vapes. All of our merchandise is made from organic Hemp.",
   },
   {
     question: "Will vaping or smoking hemp get me high?",
@@ -49,13 +38,14 @@ const FAQData = [
       <p className="spacing-none">
         We cannot send THC products to other states, only California. However,
         we can send CBD products to all compliant states. Learn about which
-        states are legal here:&nbsp;
+        states are legal&nbsp;
         <a
           href="https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
           target="__blank"
         >
-          https://blog.plainjane.com/legal-status-of-cbd-around-the-world/
+          here
         </a>
+        .
       </p>
     ),
   },
@@ -65,13 +55,14 @@ const FAQData = [
     answer: (
       <p className="spacing-none">
         Yes we ship to all compliant states and countries. Find out more about
-        which states are legal here:&nbsp;
+        which states are legal&nbsp;
         <a
           href="https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
           target="__blank"
         >
-          https://blog.plainjane.com/legal-status-of-cbd-around-the-world/
+          here
         </a>
+        .
       </p>
     ),
   },
@@ -104,7 +95,7 @@ const FAQSection = styled.div`
 `;
 
 const FAQParagraph = styled.p`
-  margin: 0 10vw 5vw 10vw !important;
+  margin: 0 10vw 10vw 10vw !important;
 `;
 
 function FAQ() {
@@ -113,7 +104,7 @@ function FAQ() {
       <FAQWordDiv className="fade-in" />
       <FAQParagraph className="fade-in-delay">
         <Accordion>
-          <Accordion2 questionsAnswers={FAQData}></Accordion2>
+          <AccordionDiv questionsAnswers={FAQData}></AccordionDiv>
         </Accordion>
       </FAQParagraph>
     </FAQSection>

@@ -25,7 +25,7 @@ const AboutSection = styled.div`
 `;
 
 const AboutParagraph = styled.p`
-  margin: 3vw 10vw 5vw 10vw !important;
+  margin: 3vw 10vw 10vw 10vw !important;
 `;
 
 function About() {

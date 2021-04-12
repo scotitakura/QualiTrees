@@ -16,6 +16,15 @@ code {
   margin: 0;
 }
 
+.overflow-break {
+  overflow-wrap: break-word;
+  font-size: 0px;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
 hr {
   width: 80% !important;
 }
@@ -118,8 +127,15 @@ hr {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 20px !important;
+  }
+  .q-a-header {
+    font-size: 30px !important;
+  }
+
   .icon-container {
-    height: 100%;
+    height: 245vw;
   }
   .becomeNavMobile.icon-container {
     height: 110vw;
@@ -127,13 +143,13 @@ hr {
   .about-icon {
     position: absolute;
     top: 92vw;
-    left: 5vw !important;
+    left: 8vw !important;
     width: 40% !important;
   }
   .products-icon {
     position: absolute;
     top: 92vw;
-    left: 54vw !important;
+    left: 52vw !important;
     width: 40% !important;
   }
   .primary-icon {
@@ -144,14 +160,14 @@ hr {
   }
   .wisdom-icon {
     position: absolute;
-    top: 175vw;
-    left: 54vw !important;
+    top: 173vw;
+    left: 52vw !important;
     width: 40% !important;
   }
   .faq-icon {
     position: absolute;
-    top: 175vw;
-    left: 5vw !important;
+    top: 173vw;
+    left: 8vw !important;
     width: 40% !important;
   }
 
@@ -168,77 +184,77 @@ hr {
   /* ABOUT MOBILE ANIMATIONS */
   @keyframes aboutMobile {
     0% { transform: translate(0, 0) scale(1) }
-    100% { transform: translate(-19.5%, -125%) scale(0.7) }
+    100% { transform: translate(-26.5%, -125%) scale(0.7) }
   }
   .becomeNavMobile .about-icon {
     animation: aboutMobile 2s;
-    transform: translate(-19.5%, -125%) scale(0.7);
+    transform: translate(-26.5%, -125%) scale(0.7);
   }
   .startMobileFloat .about-icon {
     animation: aboutMobileFloating 4.5s ease-in-out infinite;
     animation-direction: alternate;
-    transform: translate(-19.5%, -125%) scale(0.7);
+    transform: translate(-26.5%, -125%) scale(0.7);
   }
   @keyframes aboutMobileFloating { 
-    0% { transform: translate(-19.5%, -125%) scale(0.7); }
-    100%   { transform: translate(-19.5%, -130%) scale(0.7) ; }
+    0% { transform: translate(-26.5%, -125%) scale(0.7); }
+    100%   { transform: translate(-26.5%, -130%) scale(0.7) ; }
   }
 
   /* PRODUCTS MOBILE ANIMATIONS */
   @keyframes productsMobile {
     0% { transform: translate(0, 0) scale(1) }
-    100% { transform: translate(23%, -125%) scale(0.7) }
+    100% { transform: translate(28%, -125%) scale(0.7) }
   }
   .becomeNavMobile .products-icon {
     animation: productsMobile 2s;
-    transform: translate(23%, -125%) scale(0.7);
+    transform: translate(28%, -125%) scale(0.7);
   }
   .startMobileFloat .products-icon {
     animation: productsMobileFloating 6s ease-in-out infinite;
     animation-direction: alternate;
-    transform: translate(23%, -125%) scale(0.7);
+    transform: translate(28%, -125%) scale(0.7);
   }
   @keyframes productsMobileFloating { 
-    0% { transform: translate(23%, -125%) scale(0.7); }
-    100%   { transform: translate(23%, -130%) scale(0.7) ; }
+    0% { transform: translate(28%, -125%) scale(0.7); }
+    100%   { transform: translate(28%, -130%) scale(0.7) ; }
   }
 
   /* WISDOM MOBILE ANIMATIONS */
   @keyframes wisdomMobile {
     0% { transform: translate(0, 0) scale(1) }
-    100% { transform: translate(-22%, -165%) scale(0.7) }
+    100% { transform: translate(-19%, -160%) scale(0.7) }
   }
   .becomeNavMobile .wisdom-icon {
     animation: wisdomMobile 2s;
-    transform: translate(-22%, -165%) scale(0.7);
+    transform: translate(-19%, -160%) scale(0.7);
   }
   .startMobileFloat .wisdom-icon {
     animation: wisdomMobileFloating 5s ease-in-out infinite;
     animation-direction: alternate;
-    transform: translate(-22%, -165%) scale(0.7);
+    transform: translate(-19%, -160%) scale(0.7);
   }
   @keyframes wisdomMobileFloating { 
-    0% { transform: translate(-22%, -165%) scale(0.7); }
-    100%   { transform: translate(-22%, -160%) scale(0.7) ; }
+    0% { transform: translate(-19%, -160%) scale(0.7); }
+    100%   { transform: translate(-19%, -155%) scale(0.7) ; }
   }
 
   /* FAQ MOBILE ANIMATIONS */
   @keyframes faqMobile {
     0% { transform: translate(0, 0) scale(1) }
-    100% { transform: translate(26%, -165%) scale(0.7) }
+    100% { transform: translate(20%, -160%) scale(0.7) }
   }
   .becomeNavMobile .faq-icon {
     animation: faqMobile 2s;
-    transform: translate(26%, -165%) scale(0.7);
+    transform: translate(20%, -160%) scale(0.7);
   }
   .startMobileFloat .faq-icon {
     animation: faqMobileFloating 4s ease-in-out infinite;
     animation-direction: alternate;
-    transform: translate(26%, -165%) scale(0.7);
+    transform: translate(20%, -160%) scale(0.7);
   }
   @keyframes faqMobileFloating { 
-    0% { transform: translate(26%, -165%) scale(0.7); }
-    100%   { transform: translate(26%, -160%) scale(0.7) ; }
+    0% { transform: translate(20%, -160%) scale(0.7); }
+    100%   { transform: translate(20%, -155%) scale(0.7) ; }
   }
 
 }

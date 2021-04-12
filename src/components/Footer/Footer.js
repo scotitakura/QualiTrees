@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundTwo from "../../assets/images/background2.jpg"
-import wood from "../../assets/images/jp3.jpg"
 
 const StyledFooter = styled.footer`
   position: absolute;
@@ -12,7 +10,6 @@ const StyledFooter = styled.footer`
     font-size: 3vw;
   }
 `;
-
 const StyledFlexDiv = styled.div`
   display: flex;
   justify-content: space-around;
@@ -38,6 +35,19 @@ const StyledCopyright = styled.div`
 `;
 
 function Footer() {
+  // function termsConditionsClick() {
+  //   window.location="/terms-and-conditions"
+  //   const mainToNav = document.getElementById("nav");
+  //   mainToNav.className += " becomeNav becomeNavMobile";
+  //   setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+  //   window.scroll({top:0, left:0, behavior:"smooth"});
+  // }
+  // function privacyPolicyClick() {
+  //   const mainToNav = document.getElementById("nav");
+  //   mainToNav.className += " becomeNav becomeNavMobile";
+  //   setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+  //   window.scroll({top:0, left:0, behavior:"smooth"});
+  // }
   return (
     <StyledFooter className="site-footer">
         <StyledFlexDiv className="container footer-media-adj">
@@ -53,13 +63,12 @@ function Footer() {
           <StyledP>Contact Us</StyledP>
               <hr/>
             <ul className="footer-links">
-                <a href="mailto: qualitreescollective@gmail.com">qualitreescollective@gmail.com</a>
+              <li>Follow us on <a href="https://www.instagram.com/qualitreesorganics/?hl=en" target="__blank">Instagram</a></li>
+                Email us at <a href="mailto: qualitreescollective@gmail.com">qualitreescollective<span className="overflow-break"> </span>@gmail.com</a>
                 <br></br>
-                <a href="tel:">+1 (909) 551-5046</a>
-              <li><a href="https://www.linkedin.com/in/scot-itakura-289376157/">Instagram</a></li>
+                Call us at <a className="no-break"href="tel:">+1 (909) 551-5046</a>
               <StyledP>
               </StyledP>
-              {/* <StyledHrSI/> */}
             </ul>
           </StyledFlexItem>
 
@@ -67,9 +76,9 @@ function Footer() {
           <StyledP>Quick Links</StyledP>
               <hr/>
             <ul className="footer-links">
-              <li><a href="/">About Us</a></li>
-              <li><a href="/">Terms & Conditions</a></li>
-              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
           </StyledFlexItem>
         </StyledFlexDiv>

@@ -25,7 +25,7 @@ const WisdomSection = styled.div`
 `;
 
 const WisdomParagraph = styled.p`
-  margin: 3vw 10vw 5vw 10vw !important;
+  margin: 3vw 10vw 15vw 10vw !important;
 `
 
 function Wisdom() {
