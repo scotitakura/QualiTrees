@@ -5,12 +5,16 @@ import styled from "styled-components";
 const WisdomWordDiv = styled.div`
   background-image: url(${WisdomWord});
   background-size: 100% 100%;
-  height: 120px;
-  width: 350px;
   margin: 0 0 0 10% !important;
   border-style: none none double none;
   border-color: #1B5D45;
   border-width: 5px;
+  height: 120px;
+  width: 300px;
+  @media (max-width: 768px) {
+    height: 17vw;
+    width: 45vw;
+  }
 `
 
 const WisdomSection = styled.div`
@@ -21,7 +25,7 @@ const WisdomSection = styled.div`
 `;
 
 const WisdomParagraph = styled.p`
-  margin: 3% 10% 10% 10% !important;
+  margin: 3vw 10vw 5vw 10vw !important;
 `
 
 function Wisdom() {

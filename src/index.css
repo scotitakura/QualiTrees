@@ -11,6 +11,11 @@ code {
     monospace;
 }
 
+.spacing-none {
+  padding: 0;
+  margin: 0;
+}
+
 hr {
   width: 80% !important;
 }
@@ -20,7 +25,7 @@ hr {
 }
 
 .icon-container {
-  padding: 0 2% 0 2%;
+  padding: 15px 2% 0 2%;
 }
 
 .menu-icon-image {
@@ -113,17 +118,23 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .icon-container {
+    height: 100%;
+  }
+  .becomeNavMobile.icon-container {
+    height: 110vw;
+  }
   .about-icon {
     position: absolute;
-    margin-top: 90vw;
-    left: 10vw !important;
-    width: 40vw !important;
+    top: 92vw;
+    left: 5vw !important;
+    width: 40% !important;
   }
   .products-icon {
     position: absolute;
-    margin-top: 80vw;
-    left: 56vw !important;
-    width: 40vw !important;
+    top: 92vw;
+    left: 54vw !important;
+    width: 40% !important;
   }
   .primary-icon {
     position: absolute;
@@ -133,140 +144,233 @@ hr {
   }
   .wisdom-icon {
     position: absolute;
-    margin-top: 250vw;
-    left: 46vw !important;
-    width: 40vw !important;
+    top: 175vw;
+    left: 54vw !important;
+    width: 40% !important;
   }
   .faq-icon {
-    /* position: absolute; */
-    margin-top: 100vw;
-    /* left: 46vw !important;
-    width: 40vw !important; */
-    width: 40vw !important;
+    position: absolute;
+    top: 175vw;
+    left: 5vw !important;
+    width: 40% !important;
+  }
+
+  /* PRIMARY MOBILE ANIMATIONS */
+  @keyframes primaryMobile {
+    0% { transform: translate(0, 0) scale(2.28); }
+    100% { transform: translate(0, -28%) scale(1.4); }
+  }
+  .becomeNavMobile .primary-icon {
+    animation: primaryMobile 2s;
+    transform: translate(0, -28%) scale(1.4);
+  }
+
+  /* ABOUT MOBILE ANIMATIONS */
+  @keyframes aboutMobile {
+    0% { transform: translate(0, 0) scale(1) }
+    100% { transform: translate(-19.5%, -125%) scale(0.7) }
+  }
+  .becomeNavMobile .about-icon {
+    animation: aboutMobile 2s;
+    transform: translate(-19.5%, -125%) scale(0.7);
+  }
+  .startMobileFloat .about-icon {
+    animation: aboutMobileFloating 4.5s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: translate(-19.5%, -125%) scale(0.7);
+  }
+  @keyframes aboutMobileFloating { 
+    0% { transform: translate(-19.5%, -125%) scale(0.7); }
+    100%   { transform: translate(-19.5%, -130%) scale(0.7) ; }
+  }
+
+  /* PRODUCTS MOBILE ANIMATIONS */
+  @keyframes productsMobile {
+    0% { transform: translate(0, 0) scale(1) }
+    100% { transform: translate(23%, -125%) scale(0.7) }
+  }
+  .becomeNavMobile .products-icon {
+    animation: productsMobile 2s;
+    transform: translate(23%, -125%) scale(0.7);
+  }
+  .startMobileFloat .products-icon {
+    animation: productsMobileFloating 6s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: translate(23%, -125%) scale(0.7);
+  }
+  @keyframes productsMobileFloating { 
+    0% { transform: translate(23%, -125%) scale(0.7); }
+    100%   { transform: translate(23%, -130%) scale(0.7) ; }
+  }
+
+  /* WISDOM MOBILE ANIMATIONS */
+  @keyframes wisdomMobile {
+    0% { transform: translate(0, 0) scale(1) }
+    100% { transform: translate(-22%, -165%) scale(0.7) }
+  }
+  .becomeNavMobile .wisdom-icon {
+    animation: wisdomMobile 2s;
+    transform: translate(-22%, -165%) scale(0.7);
+  }
+  .startMobileFloat .wisdom-icon {
+    animation: wisdomMobileFloating 5s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: translate(-22%, -165%) scale(0.7);
+  }
+  @keyframes wisdomMobileFloating { 
+    0% { transform: translate(-22%, -165%) scale(0.7); }
+    100%   { transform: translate(-22%, -160%) scale(0.7) ; }
+  }
+
+  /* FAQ MOBILE ANIMATIONS */
+  @keyframes faqMobile {
+    0% { transform: translate(0, 0) scale(1) }
+    100% { transform: translate(26%, -165%) scale(0.7) }
+  }
+  .becomeNavMobile .faq-icon {
+    animation: faqMobile 2s;
+    transform: translate(26%, -165%) scale(0.7);
+  }
+  .startMobileFloat .faq-icon {
+    animation: faqMobileFloating 4s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: translate(26%, -165%) scale(0.7);
+  }
+  @keyframes faqMobileFloating { 
+    0% { transform: translate(26%, -165%) scale(0.7); }
+    100%   { transform: translate(26%, -160%) scale(0.7) ; }
+  }
+
+}
+
+
+@media (min-width: 769px) {
+  .becomeNav .primary-icon {
+    animation: grow 2s;
+    transform: scale(1.2);
+  }
+
+  @keyframes grow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+
+  .clickTransform.becomeNav {
+    animation: moveUp 2s;
+    transform: translate(0, -28%) scale(0.5);
+    margin-bottom: -18%;
+  }
+
+  @keyframes moveUp { 
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(0, -28%) scale(0.5); }
+  } 
+
+  .becomeNav .about-icon {
+    animation: about-grow 2s;
+    transform: scale(1.4) translateX(-120%);
+  }
+  @keyframes about-grow {
+    0% { transform: scale(1) translateX(0%); }
+    100% { transform: scale(1.4) translateX(-120%); }
+  }
+  .startFloat .about-icon {
+    animation: about-floating 4s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.4) translate(-120%, 0%);
+  }
+  @keyframes about-floating { 
+    0% { transform: scale(1.4) translate(-120%,  0%); }
+    100%   { transform: scale(1.4) translate(-120%, 15px); }
+  }
+
+  .becomeNav .products-icon {
+    animation: products-grow 2s;
+    transform: scale(1.4) translateX(-50%);
+  }
+  @keyframes products-grow {
+    0% { transform: scale(1) translateX(0%); }
+    100% { transform: scale(1.4) translateX(-50%); }
+  }
+  .startFloat .products-icon {
+    animation: products-floating 3.5s ease-in-out infinite !important;
+    animation-direction: alternate !important;
+    transform: scale(1.4) translate(-50%, 0%);
+  }
+  @keyframes products-floating { 
+    0% { transform: scale(1.4) translate(-50%,  0%); }
+    100%   { transform: scale(1.4) translate(-50%, 15px); }
+  } 
+
+  .becomeNav .wisdom-icon {
+    animation: wisdom-grow 2s;
+    transform: scale(1.4) translateX(50%);
+  }
+  @keyframes wisdom-grow {
+    0% { transform: scale(1) translateX(0%); }
+    100% { transform: scale(1.4) translateX(50%); }
+  }
+  .startFloat .wisdom-icon {
+    animation: wisdom-floating 3s ease-in-out infinite !important;
+    animation-direction: alternate !important;
+    transform: scale(1.4) translate(50%, 0%);
+  }
+  @keyframes wisdom-floating { 
+    0% { transform: scale(1.4) translate(50%,  0%); }
+    100%   { transform: scale(1.4) translate(50%, 15px); }
+  } 
+
+  .becomeNav .faq-icon {
+    animation: faq-grow 2s;
+    transform: scale(1.4) translateX(120%);
+  }
+  @keyframes faq-grow {
+    0% { transform: scale(1) translateX(0%); }
+    100% { transform: scale(1.4) translateX(120%); }
+  }
+  .startFloat .faq-icon {
+    animation: faq-floating 4.5s ease-in-out infinite !important;
+    animation-direction: alternate !important;
+    transform: scale(1.4) translate(120%, 0%);
+  }
+  @keyframes faq-floating { 
+    0% { transform: scale(1.4) translate(120%,  0%); }
+    100%   { transform: scale(1.4) translate(120%, 15px); }
+  } 
+
+  .becomeNav .products-icon {
+    animation: products-grow 2s;
+    transform: scale(1.4) translateX(-50%);
+  }
+  .becomeNav .wisdom-icon {
+    animation: wisdom-grow 2s;
+    transform: scale(1.4) translateX(50%);
+  }
+  .becomeNav .faq-icon {
+    animation: faq-grow 2s;
+    transform: scale(1.4) translateX(120%);
+  }
+
+  @keyframes products-grow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4) translateX(-50%); }
+  }
+
+  @keyframes wisdom-grow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4) translateX(50%); }
+  }
+
+  @keyframes faq-grow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4) translateX(120%); }
   }
 }
-
-.becomeNav .primary-icon {
-  animation: grow 2s;
-  transform: scale(1.2);
+ /* FADE IN STYLING */
+.fade-in-fast {
+  animation: fadeIn ease 1.5s;
+  animation-fill-mode: forwards; 
 }
-
-@keyframes grow {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.2); }
-}
-
-.clickTransform.becomeNav {
-  animation: moveUp 2s;
-  transform: translate(0, -28%) scale(0.5);
-  margin-bottom: -18%;
-}
-
-@keyframes moveUp { 
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(0, -28%) scale(0.5); }
-} 
-
-.becomeNav .about-icon {
-  animation: about-grow 2s;
-  transform: scale(1.4) translateX(-120%);
-}
-@keyframes about-grow {
-  0% { transform: scale(1) translateX(0%); }
-  100% { transform: scale(1.4) translateX(-120%); }
-}
-.startFloat .about-icon {
-  animation: about-floating 4s ease-in-out infinite;
-  animation-direction: alternate;
-  transform: scale(1.4) translate(-120%, 0%);
-}
-@keyframes about-floating { 
-  0% { transform: scale(1.4) translate(-120%,  0%); }
-  100%   { transform: scale(1.4) translate(-120%, 15px); }
-}
-
-.becomeNav .products-icon {
-  animation: products-grow 2s;
-  transform: scale(1.4) translateX(-50%);
-}
-@keyframes products-grow {
-  0% { transform: scale(1) translateX(0%); }
-  100% { transform: scale(1.4) translateX(-50%); }
-}
-.startFloat .products-icon {
-  animation: products-floating 3.5s ease-in-out infinite !important;
-  animation-direction: alternate !important;
-  transform: scale(1.4) translate(-50%, 0%);
-}
-@keyframes products-floating { 
-  0% { transform: scale(1.4) translate(-50%,  0%); }
-  100%   { transform: scale(1.4) translate(-50%, 15px); }
-} 
-
-.becomeNav .wisdom-icon {
-  animation: wisdom-grow 2s;
-  transform: scale(1.4) translateX(50%);
-}
-@keyframes wisdom-grow {
-  0% { transform: scale(1) translateX(0%); }
-  100% { transform: scale(1.4) translateX(50%); }
-}
-.startFloat .wisdom-icon {
-  animation: wisdom-floating 3s ease-in-out infinite !important;
-  animation-direction: alternate !important;
-  transform: scale(1.4) translate(50%, 0%);
-}
-@keyframes wisdom-floating { 
-  0% { transform: scale(1.4) translate(50%,  0%); }
-  100%   { transform: scale(1.4) translate(50%, 15px); }
-} 
-
-.becomeNav .faq-icon {
-  animation: faq-grow 2s;
-  transform: scale(1.4) translateX(120%);
-}
-@keyframes faq-grow {
-  0% { transform: scale(1) translateX(0%); }
-  100% { transform: scale(1.4) translateX(120%); }
-}
-.startFloat .faq-icon {
-  animation: faq-floating 4.5s ease-in-out infinite !important;
-  animation-direction: alternate !important;
-  transform: scale(1.4) translate(120%, 0%);
-}
-@keyframes faq-floating { 
-  0% { transform: scale(1.4) translate(120%,  0%); }
-  100%   { transform: scale(1.4) translate(120%, 15px); }
-} 
-
-.becomeNav .products-icon {
-  animation: products-grow 2s;
-  transform: scale(1.4) translateX(-50%);
-}
-.becomeNav .wisdom-icon {
-  animation: wisdom-grow 2s;
-  transform: scale(1.4) translateX(50%);
-}
-.becomeNav .faq-icon {
-  animation: faq-grow 2s;
-  transform: scale(1.4) translateX(120%);
-}
-
-@keyframes products-grow {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.4) translateX(-50%); }
-}
-
-@keyframes wisdom-grow {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.4) translateX(50%); }
-}
-
-@keyframes faq-grow {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.4) translateX(120%); }
-}
-
 .fade-in {
   animation: fadeIn ease 3s;
   animation-fill-mode: forwards; 
@@ -295,17 +399,22 @@ hr {
 
 /* FAQ */
 .faq {
-  width: 100%;
+  outline: none;
 }
 .faq__question {
-  margin-right: 20%;
+  margin-right: 10%;
+  margin-left: 10%;
   padding-top: 15px;
 }
 .faq__answer {
-  margin-right: 20%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 .q-a-header {
   font-weight: bold;
   font-size: 40px;
-  margin: 0 0 0 5px;
+  margin: -5px 0 0 5px;
+}
+.no-outline {
+  outline: none;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import FAQWord from "../assets/images/faq-word-edit.png";
 import styled from "styled-components";
-import Accordion2 from "../components/Accordion/Accordion.js"
+import Accordion2 from "../components/Accordion/Accordion.js";
 import {
   Accordion,
   AccordionItem,
@@ -10,6 +10,11 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
+const shipLink =
+  "https://blog.plainjane.com/legal-status-of-cbd-around-the-world/";
+const shipHyperLink = shipLink.link(
+  "https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
+);
 const FAQData = [
   {
     question: "How can I order from the QualiTrees website?",
@@ -40,14 +45,35 @@ const FAQData = [
   },
   {
     question: "Can QualiTrees deliver its THC products to other states?",
-    answer:
-      "We cannot send THC products to other states, only California. However, we can send CBD products to all compliant states. Learn about which states are legal here: https://blog.plainjane.com/legal-status-of-cbd-around-the-world/",
+    answer: (
+      <p className="spacing-none">
+        We cannot send THC products to other states, only California. However,
+        we can send CBD products to all compliant states. Learn about which
+        states are legal here:&nbsp;
+        <a
+          href="https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
+          target="__blank"
+        >
+          https://blog.plainjane.com/legal-status-of-cbd-around-the-world/
+        </a>
+      </p>
+    ),
   },
   {
     question:
       "Can QualiTrees deliver its CBD products to other states or countries?",
-    answer:
-      "Yes we ship to all compliant states and countries. Find out more about which states are legal here: https://blog.plainjane.com/legal-status-of-cbd-around-the-world/",
+    answer: (
+      <p className="spacing-none">
+        Yes we ship to all compliant states and countries. Find out more about
+        which states are legal here:&nbsp;
+        <a
+          href="https://blog.plainjane.com/legal-status-of-cbd-around-the-world/"
+          target="__blank"
+        >
+          https://blog.plainjane.com/legal-status-of-cbd-around-the-world/
+        </a>
+      </p>
+    ),
   },
   {
     question: "What does the word “QualiTrees” mean?",
@@ -58,12 +84,16 @@ const FAQData = [
 const FAQWordDiv = styled.div`
   background-image: url(${FAQWord});
   background-size: 100% 100%;
-  height: 120px;
-  width: 250px;
   margin: 0 0 0 10% !important;
   border-style: none none double none;
   border-color: #1b5d45;
   border-width: 5px;
+  height: 120px;
+  width: 250px;
+  @media (max-width: 768px) {
+    height: 17vw;
+    width: 35vw;
+  }
 `;
 
 const FAQSection = styled.div`
@@ -74,7 +104,7 @@ const FAQSection = styled.div`
 `;
 
 const FAQParagraph = styled.p`
-  margin: 3% 10% 10% 10% !important;
+  margin: 0 10vw 5vw 10vw !important;
 `;
 
 function FAQ() {
@@ -82,9 +112,9 @@ function FAQ() {
     <FAQSection>
       <FAQWordDiv className="fade-in" />
       <FAQParagraph className="fade-in-delay">
-          <Accordion>
-            <Accordion2 questionsAnswers={FAQData}></Accordion2>
-          </Accordion>
+        <Accordion>
+          <Accordion2 questionsAnswers={FAQData}></Accordion2>
+        </Accordion>
       </FAQParagraph>
     </FAQSection>
   );

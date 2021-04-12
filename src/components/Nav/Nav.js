@@ -17,44 +17,49 @@ import styled from "styled-components";
 const SContents = styled.div`
   padding-top: 5rem;
   padding-bottom: 20rem;
-`
+`;
 
 function Nav() {
   function aboutClick() {
     const mainToNav = document.getElementById("nav");
-    mainToNav.className += " becomeNav";
-    setTimeout(() => (mainToNav.className += " startFloat"), 2000);
+    mainToNav.className += " becomeNav becomeNavMobile";
+    setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+    window.scroll({top:0, left:0, behavior:"smooth"});
   }
   function productsClick() {
     const mainToNav = document.getElementById("nav");
-    mainToNav.className += " becomeNav";
-    setTimeout(() => (mainToNav.className += " startFloat"), 2000);
+    mainToNav.className += " becomeNav becomeNavMobile";
+    setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+    window.scroll({top:0, left:0, behavior:"smooth"});
   }
   function mainClick() {
     window.location.href = "/";
+    window.scroll({top:0, left:0, behavior:"smooth"});
   }
   function wisdomClick() {
     const mainToNav = document.getElementById("nav");
-    mainToNav.className += " becomeNav";
-    setTimeout(() => (mainToNav.className += " startFloat"), 2000);
+    mainToNav.className += " becomeNav becomeNavMobile";
+    setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+    window.scroll({top:0, left:0, behavior:"smooth"});
   }
   function faqClick() {
     const mainToNav = document.getElementById("nav");
-    mainToNav.className += " becomeNav";
-    setTimeout(() => (mainToNav.className += " startFloat"), 2000);
+    mainToNav.className += " becomeNav becomeNavMobile";
+    setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
+    window.scroll({top:0, left:0, behavior:"smooth"});
   }
 
   return (
     <Router>
-      <SContents class="column-container">
-        <div id="nav" class="row valign-wrapper clickTransform icon-container">
+      <SContents className="column-container">
+        <div id="nav" className="row valign-wrapper clickTransform icon-container">
           <Link
             to="/about"
-            class="icon menu-icon outer-icon left-icon about-icon col s2 center-align"
+            className="icon menu-icon outer-icon left-icon about-icon col s2 center-align"
             onClick={aboutClick}
           >
             <img
-              class="menu-icon-image "
+              className="menu-icon-image "
               src={aboutIcon}
               alt="QualiTrees Logo"
             />
@@ -62,11 +67,11 @@ function Nav() {
 
           <Link
             to="/products"
-            class="icon menu-icon left-icon products-icon col s2"
+            className="icon menu-icon left-icon products-icon col s2"
             onClick={productsClick}
           >
             <img
-              class="menu-icon-image"
+              className="menu-icon-image"
               src={productsIcon}
               alt="Products Icon"
             />
@@ -74,7 +79,7 @@ function Nav() {
 
           <Link to="/" class="icon primary-icon col s4" onClick={mainClick}>
             <img
-              class="background-icon"
+              className="background-icon"
               src={shineLogo}
               alt="QualiTrees Logo"
             />
@@ -82,11 +87,11 @@ function Nav() {
 
           <Link
             to="/wisdom"
-            class="icon menu-icon right-icon wisdom-icon col s2"
+            className="icon menu-icon right-icon wisdom-icon col s2"
             onClick={wisdomClick}
           >
             <img
-              class="menu-icon-image"
+              className="menu-icon-image"
               src={wisdomIcon}
               alt="QualiTrees Logo"
             />
@@ -94,10 +99,10 @@ function Nav() {
 
           <Link
             to="/faq"
-            class="icon menu-icon outer-icon right-icon faq-icon col s2"
+            className="icon menu-icon outer-icon right-icon faq-icon col s2"
             onClick={faqClick}
           >
-            <img class="menu-icon-image" src={faqIcon} alt="QualiTrees Logo" />
+            <img className="menu-icon-image" src={faqIcon} alt="QualiTrees Logo" />
           </Link>
         </div>
         <Switch>

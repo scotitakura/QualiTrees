@@ -10,8 +10,11 @@ const StyledBackground = styled.div`
   display: flex;
   background-image: url('${wood}');
   background-size: 50%;
-  min-height: 100vh;
+  min-height: 100vw;
   width: 100vw;
+  @media (max-width: 768px) {
+    min-height: 300vw;
+  }
 `
 
 function MainPage() {

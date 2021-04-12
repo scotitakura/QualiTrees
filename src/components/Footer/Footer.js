@@ -8,6 +8,9 @@ const StyledFooter = styled.footer`
   bottom: 0;
   width: 100%;
   font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
 `;
 
 const StyledFlexDiv = styled.div`
@@ -18,10 +21,6 @@ const StyledFlexDiv = styled.div`
   align-content: space-around;
   text-align: center;
 `;
-
-// const StyledHrSI = styled.hr`
-//   width: 100px;
-// `;
 
 const StyledP = styled.p`
   font-weight: bold;
