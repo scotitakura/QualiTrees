@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Route, Switch, Link } from "react-router-dom";
 
 import aboutIcon from "../../assets/images/about-icon.png";
 import productsIcon from "../../assets/images/products-icon.png";
@@ -58,6 +58,7 @@ function Nav() {
     <Router>
       <SContents className="column-container">
         <div id="nav" className="row valign-wrapper clickTransform icon-container">
+          <HashRouter basename=""/>
           <Link
             to="/about"
             className="icon menu-icon outer-icon left-icon about-icon col s2 center-align"
