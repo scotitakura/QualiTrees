@@ -17,8 +17,11 @@ import PrivacyPolicy from "../../pages/PrivacyPolicy.js";
 import styled from "styled-components";
 
 const SContents = styled.div`
-  padding-top: 5rem;
+  padding-top: 8rem;
   padding-bottom: 20rem;
+  @media (min-aspect-ratio: 4/3) {
+    padding-top: 10rem !important;
+  }
 `;
 
 function Nav() {

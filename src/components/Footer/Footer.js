@@ -35,19 +35,6 @@ const StyledCopyright = styled.div`
 `;
 
 function Footer() {
-  // function termsConditionsClick() {
-  //   window.location="/terms-and-conditions"
-  //   const mainToNav = document.getElementById("nav");
-  //   mainToNav.className += " becomeNav becomeNavMobile";
-  //   setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
-  //   window.scroll({top:0, left:0, behavior:"smooth"});
-  // }
-  // function privacyPolicyClick() {
-  //   const mainToNav = document.getElementById("nav");
-  //   mainToNav.className += " becomeNav becomeNavMobile";
-  //   setTimeout(() => (mainToNav.className += " startFloat startMobileFloat"), 2000);
-  //   window.scroll({top:0, left:0, behavior:"smooth"});
-  // }
   return (
     <StyledFooter className="site-footer">
         <StyledFlexDiv className="container footer-media-adj">
@@ -77,7 +64,7 @@ function Footer() {
               <hr/>
             <ul className="footer-links">
               <li><a href="/about">About Us</a></li>
-              <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+              <li><a className="no-break" href="/terms-and-conditions">Terms & Conditions</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
           </StyledFlexItem>
