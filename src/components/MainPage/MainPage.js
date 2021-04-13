@@ -1,7 +1,7 @@
 import React from "react";
 import wood from "../../assets/images/jp3.jpg"
-import Nav from "../Nav/Nav";
-import Footer from "../Footer/Footer.js";
+// import Body from "../Body/Body.js";
+// import Footer from "../Footer/Footer.js";
 
 import styled from "styled-components";
 
@@ -17,10 +17,11 @@ const StyledBackground = styled.div`
 
 function MainPage() {
   return (  
-    <StyledBackground>
-      <Nav />
-      <Footer />
-    </StyledBackground>
+    <div></div>
+    // <StyledBackground>
+    //   <Body />
+    //   <Footer />
+    // </StyledBackground>
   );
 }
 

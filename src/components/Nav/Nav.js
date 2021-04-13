@@ -58,7 +58,6 @@ function Nav() {
     <Router>
       <SContents className="column-container">
         <div id="nav" className="row valign-wrapper clickTransform icon-container">
-          <HashRouter basename="#"/>
           <Link
             to="/about"
             className="icon menu-icon outer-icon left-icon about-icon col s2 center-align"
