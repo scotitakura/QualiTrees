@@ -60,7 +60,7 @@ function Nav(props) {
         className="row valign-wrapper clickTransform icon-container"
       >
         <div
-          className={`icon menu-icon outer-icon left-icon about-icon col s2 center-align ${
+          className={`icon menu-icon outer-icon left-icon about-icon col s2 center-align pointer ${
             currentCategory.name === "about" && "navActive"
           }`}
           onClick={aboutClick}
@@ -74,7 +74,7 @@ function Nav(props) {
         </div>
 
         <div
-          className={`icon menu-icon left-icon products-icon col s2 ${
+          className={`icon menu-icon left-icon products-icon col s2 pointer ${
             currentCategory.name === "products" && "navActive"
           }`}
           onClick={productsClick}
@@ -87,7 +87,7 @@ function Nav(props) {
           />
         </div>
 
-        <div class="icon primary-icon col s4" onClick={mainClick}>
+        <div class="icon primary-icon col s4 pointer" onClick={mainClick}>
           <img
             className="background-icon"
             src={shineLogo}
@@ -96,7 +96,7 @@ function Nav(props) {
         </div>
 
         <div
-          className={`icon menu-icon right-icon wisdom-icon col s2 ${
+          className={`icon menu-icon right-icon wisdom-icon col s2 pointer ${
             currentCategory.name === "wisdom" && "navActive"
           }`}
           onClick={wisdomClick}
@@ -110,7 +110,7 @@ function Nav(props) {
         </div>
 
         <div
-          className={`icon menu-icon outer-icon right-icon faq-icon col s2 ${
+          className={`icon menu-icon outer-icon right-icon faq-icon col s2 pointer ${
             currentCategory.name === "faq" && "navActive"
           }`}
           onClick={faqClick}

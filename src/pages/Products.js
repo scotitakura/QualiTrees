@@ -27,17 +27,48 @@ const ProductsSection = styled.div`
 const ProductsParagraph = styled.p`
   margin: 3vw 10vw 5vw 10vw !important;
 `
+const SCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: centered;
+  justify-content: centered;
+`
+const STitle = styled.h4`
+  margin-left: auto;
+  margin-right: auto;
+`
+const SPhoto = styled.img`
+  margin-left: auto;
+  margin-right: auto;
+`
+const SDescription = styled.p`
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+`
 
 function Products() {
   return (
     <ProductsSection>
     <hr className="fade-in-hrdelay" />
       <ProductsWordDiv className="fade-in" />
-      <ProductsParagraph className="fade-in-delay"> 
-      Title of products
-      Product photo
-      Small description
+      <ProductsParagraph className="row fade-in-delay"> 
         <a href="https://www.wpdispensary.com/">Link</a>
+        <SCard className="col s3">
+          <STitle>Title of products</STitle>
+          <SPhoto></SPhoto>
+          <SDescription>Small description</SDescription>
+        </SCard>
+        <SCard className="col s3">
+          <STitle>Title of products</STitle>
+          <SPhoto></SPhoto>
+          <SDescription>Small description</SDescription>
+        </SCard>
+        <SCard className="col s3">
+          <STitle>Title of products</STitle>
+          <SPhoto></SPhoto>
+          <SDescription>Small description</SDescription>
+        </SCard>
       </ProductsParagraph>
     </ProductsSection>
   );

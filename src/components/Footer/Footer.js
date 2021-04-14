@@ -97,7 +97,7 @@ function Footer(props) {
           <ul className="footer-links">
             <li>
               <a
-                className={`${
+                className={`pointer ${
                   currentCategory.name === "about" && "navActive"
                 }`}
                 onClick={aboutClick}
@@ -108,7 +108,7 @@ function Footer(props) {
             </li>
             <li>
               <a
-                className={`no-break ${
+                className={`pointer no-break ${
                   currentCategory.name === "termsConditions" && "navActive"
                 }`}
                 onClick={activateTerms}
@@ -119,7 +119,7 @@ function Footer(props) {
             </li>
             <li>
               <a
-                className={`no-break ${
+                className={`pointer no-break ${
                   currentCategory.name === "privacyPolicy" && "navActive"
                 }`}
                 onClick={activatePolicy}

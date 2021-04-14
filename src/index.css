@@ -25,6 +25,10 @@ code {
   white-space: nowrap;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 hr {
   width: 80% !important;
 }
