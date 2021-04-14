@@ -34,41 +34,103 @@ const StyledCopyright = styled.div`
   font-size: 0.7em !important;
 `;
 
-function Footer() {
+function Footer(props) {
+  const { categories = [], setCurrentCategory, currentCategory } = props;
+
+  function aboutClick() {
+    setCurrentCategory({ name: "about", description: "About me page" });
+  }
+  function activateTerms() {
+    setCurrentCategory({
+      name: "termsConditions",
+      description: "Terms and Conditions page",
+    });
+  }
+  function activatePolicy() {
+    setCurrentCategory({
+      name: "privacyPolicy",
+      description: "Privacy Policy page",
+    });
+  }
   return (
     <StyledFooter className="site-footer">
-        <StyledFlexDiv className="container footer-media-adj">
-          <StyledFlexItem className="footer-flex-adj">
+      <StyledFlexDiv className="container footer-media-adj">
+        <StyledFlexItem className="footer-flex-adj">
           <StyledP>Sign Up</StyledP>
-              <hr/>
-            <p className="text-center">
-              Addresses/contact information, social media information, email signup
-            </p>
-          </StyledFlexItem>
+          <hr />
+          <p className="text-center">
+            Addresses/contact information, social media information, email
+            signup
+          </p>
+        </StyledFlexItem>
 
-          <StyledFlexItem className="footer-flex-adj">
+        <StyledFlexItem className="footer-flex-adj">
           <StyledP>Contact Us</StyledP>
-              <hr/>
-            <ul className="footer-links">
-              <li>Follow us on <a href="https://www.instagram.com/qualitreesorganics/?hl=en" target="__blank">Instagram</a></li>
-                Email us at <a href="mailto: qualitreescollective@gmail.com">qualitreescollective<span className="overflow-break"> </span>@gmail.com</a>
-                <br></br>
-                Call us at <a className="no-break"href="tel:">+1 (909) 551-5046</a>
-              <StyledP>
-              </StyledP>
-            </ul>
-          </StyledFlexItem>
+          <hr />
+          <ul className="footer-links">
+            <li>
+              Follow us on{" "}
+              <a
+                href="https://www.instagram.com/qualitreesorganics/?hl=en"
+                target="__blank"
+              >
+                Instagram
+              </a>
+            </li>
+            Email us at{" "}
+            <a href="mailto: qualitreescollective@gmail.com">
+              qualitreescollective<span className="overflow-break"> </span>
+              @gmail.com
+            </a>
+            <br></br>
+            Call us at{" "}
+            <a className="no-break" href="tel:">
+              +1 (909) 551-5046
+            </a>
+            <StyledP></StyledP>
+          </ul>
+        </StyledFlexItem>
 
-          <StyledFlexItem className="footer-flex-adj">
+        <StyledFlexItem className="footer-flex-adj">
           <StyledP>Quick Links</StyledP>
-              <hr/>
-            <ul className="footer-links">
-              <li><a href="/about">About Us</a></li>
-              <li><a className="no-break" href="/terms-and-conditions">Terms & Conditions</a></li>
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-            </ul>
-          </StyledFlexItem>
-        </StyledFlexDiv>
+          <hr />
+          <ul className="footer-links">
+            <li>
+              <a
+                className={`${
+                  currentCategory.name === "about" && "navActive"
+                }`}
+                onClick={aboutClick}
+                key="about"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                className={`no-break ${
+                  currentCategory.name === "termsConditions" && "navActive"
+                }`}
+                onClick={activateTerms}
+                key="termsConditions"
+              >
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                className={`no-break ${
+                  currentCategory.name === "privacyPolicy" && "navActive"
+                }`}
+                onClick={activatePolicy}
+                key="privacyPolicy"
+              >
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </StyledFlexItem>
+      </StyledFlexDiv>
       <StyledCopyright>
         <p className="container">
           Copyright &copy; 2020 All Rights (Not Yet) Reserved

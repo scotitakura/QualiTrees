@@ -101,6 +101,7 @@ const FAQParagraph = styled.p`
 function FAQ() {
   return (
     <FAQSection>
+    <hr className="fade-in-hrdelay" />
       <FAQWordDiv className="fade-in" />
       <FAQParagraph className="fade-in-delay">
         <Accordion>

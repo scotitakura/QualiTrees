@@ -130,6 +130,11 @@ hr {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 525px) {
+  .becomeNavMobile.icon-container {
+    height: 95vw !important;
+  }
+}
 @media (max-width: 768px) {
   body {
     font-size: 20px !important;
@@ -409,7 +414,7 @@ hr {
 }
 .fade-in-hrdelay {
   animation: fadeIn ease 2s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards; 
   opacity: 0;
 }

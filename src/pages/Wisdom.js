@@ -31,6 +31,7 @@ const WisdomParagraph = styled.p`
 function Wisdom() {
   return (
     <WisdomSection>
+    <hr className="fade-in-hrdelay" />
       <WisdomWordDiv className="fade-in" />
       <WisdomParagraph className="fade-in-delay">
         QualiTrees was born from two enthusiastic California cannabis

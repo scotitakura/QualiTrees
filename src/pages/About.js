@@ -2,6 +2,12 @@ import React from "react";
 import AboutWord from "../assets/images/about-word-edit.png";
 import styled from "styled-components";
 
+const AboutSection = styled.div`
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+`;
 const AboutWordDiv = styled.div`
   background-image: url(${AboutWord});
   background-size: 100% 100%;
@@ -16,14 +22,6 @@ const AboutWordDiv = styled.div`
     width: 50vw;
   }
 `;
-
-const AboutSection = styled.div`
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-`;
-
 const AboutParagraph = styled.p`
   margin: 3vw 10vw 10vw 10vw !important;
 `;
@@ -31,6 +29,7 @@ const AboutParagraph = styled.p`
 function About() {
   return (
     <AboutSection>
+    <hr className="fade-in-hrdelay" />
       <AboutWordDiv className="fade-in" />
       <AboutParagraph className="fade-in-delay">
         QualiTrees was born from two enthusiastic California cannabis

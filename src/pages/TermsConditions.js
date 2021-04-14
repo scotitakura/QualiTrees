@@ -7,7 +7,6 @@ const TermsConditionsSection = styled.div`
   flex-direction: column;
   align-items: left;
 `;
-
 const TermsConditionsParagraph = styled.p`
   margin: 3vw 10vw 10vw 10vw !important;
 `;
@@ -15,6 +14,7 @@ const TermsConditionsParagraph = styled.p`
 function TermsConditions() {
   return (
     <TermsConditionsSection>
+    <hr className="fade-in-hrdelay" />
       <TermsConditionsParagraph className="fade-in-delay">
         TERMS OF SERVICE
         <br></br>

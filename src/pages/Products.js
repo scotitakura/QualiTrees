@@ -31,6 +31,7 @@ const ProductsParagraph = styled.p`
 function Products() {
   return (
     <ProductsSection>
+    <hr className="fade-in-hrdelay" />
       <ProductsWordDiv className="fade-in" />
       <ProductsParagraph className="fade-in-delay"> 
       Title of products

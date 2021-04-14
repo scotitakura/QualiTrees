@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import Nav from "../Nav/Nav.js"
-import wood from "../../assets/images/jp3.jpg"
+import backgroundjp3 from "../../assets/images/jp3.jpg";
+import Nav from "../Nav/Nav.js";
 import Footer from "../Footer/Footer.js";
 
-import aboutIcon from "../../assets/images/about-icon.png";
-import productsIcon from "../../assets/images/products-icon.png";
-import shineLogo from "../../assets/images/shine-logo.png";
-import wisdomIcon from "../../assets/images/wisdom-icon.png";
-import faqIcon from "../../assets/images/faq-icon.png";
-
-import MainPage from "../MainPage/MainPage.js";
 import About from "../../pages/About.js";
 import Products from "../../pages/Products.js";
 import Wisdom from "../../pages/Wisdom.js";
@@ -22,42 +15,61 @@ import styled from "styled-components";
 const StyledBackground = styled.div`
   position: relative;
   display: flex;
-  background-image: url('${wood}');
+  background-image: url("${backgroundjp3}");
   background-size: 50%;
   @media (max-width: 768px) {
     min-height: 300vw;
   }
-`
+`;
+const SContents = styled.div`
+  padding-top: 8rem;
+  padding-bottom: 20rem;
+  @media (min-aspect-ratio: 4/3) {
+    padding-top: 10rem !important;
+  }
+  @media (max-width: 525px) {
+    padding-bottom: 15rem !important;
+  }
+`;
+
 function Body() {
   const [categories] = useState([
-    { name: "MainPage", description: "Blank home page" },
-    { name: "About", description: "About me page" },
-    { name: "Products", description: "Products page" },
-    { name: "Wisdom", description: "Wisdom page" },
-    { name: "FAQ", description: "FAQ page" },
-    { name: "TermsConditions", description: "Terms and Conditions" },
-    { name: "PrivacyPolicy", description: "Privacy Policy" },
+    { name: "mainPage", description: "Main page" },
+    { name: "about", description: "About me page" },
+    { name: "products", description: "Products page" },
+    { name: "wisdom", description: "Wisdom page" },
+    { name: "faq", description: "FAQ page" },
+    { name: "termsConditions", description: "Terms and Conditions page" },
+    { name: "privacyPolicy", description: "Privacy Policy page" },
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
-    <StyledBackground>
-      <Nav
-      categories={categories}
-      setCurrentCategory={setCurrentCategory}
-      currentCategory={currentCategory}>
-      </Nav>
-      <main>
-        {currentCategory.name === "MainPage" && <MainPage />}
-        {currentCategory.name === "About" && <About />}
-        {currentCategory.name === "Products" && <Products />}
-        {currentCategory.name === "Wisdom" && <Wisdom />}
-        {currentCategory.name === "FAQ" && <FAQ />}
-        {currentCategory.name === "TermsConditions" && <TermsConditions />}
-        {currentCategory.name === "PrivacyPolicy" && <PrivacyPolicy />}
-      </main>
-      <Footer />
-    </StyledBackground>
+    <div>
+      <StyledBackground className="container-column">
+        <SContents>
+          <Nav
+            categories={categories}
+            setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}
+            ></Nav>
+          <main>
+            {currentCategory.name === "mainpage"}
+            {currentCategory.name === "about" && <About />}
+            {currentCategory.name === "products" && <Products />}
+            {currentCategory.name === "wisdom" && <Wisdom />}
+            {currentCategory.name === "faq" && <FAQ />}
+            {currentCategory.name === "termsConditions" && <TermsConditions />}
+            {currentCategory.name === "privacyPolicy" && <PrivacyPolicy />}
+          </main>
+        </SContents>
+        <Footer
+          categories={categories}
+          setCurrentCategory={setCurrentCategory}
+          currentCategory={currentCategory}
+        ></Footer>
+      </StyledBackground>
+    </div>
   );
 }
 

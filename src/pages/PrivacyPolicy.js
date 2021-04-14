@@ -14,6 +14,7 @@ const PrivacyPolicyParagraph = styled.p`
 function PrivacyPolicy() {
   return (
     <PrivacyPolicySection>
+    <hr className="fade-in-hrdelay" />
       <PrivacyPolicyParagraph className="fade-in-delay">
         QUALITREES PRIVACY POLICY
         <br></br>
