@@ -22,6 +22,7 @@ const StyledBackground = styled.div`
   }
 `;
 const SContents = styled.div`
+  min-height: 100vh;
   padding-top: 8rem;
   padding-bottom: 20rem;
   @media (min-aspect-ratio: 4/3) {

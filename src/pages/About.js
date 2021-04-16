@@ -23,6 +23,8 @@ const AboutWordDiv = styled.div`
   }
 `;
 const AboutParagraph = styled.p`
+  text-align: justify;
+  text-justify: inter-word;
   margin: 3vw 10vw 10vw 10vw !important;
 `;
 

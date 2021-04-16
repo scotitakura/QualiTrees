@@ -1,5 +1,5 @@
 import React from "react";
-import ProductsWord from "../assets/images/products-word-edit.png"
+import ProductsWord from "../assets/images/products-word-edit.png";
 import styled from "styled-components";
 
 const ProductsWordDiv = styled.div`
@@ -7,7 +7,7 @@ const ProductsWordDiv = styled.div`
   background-size: 100% 100%;
   margin: 0 0 0 10% !important;
   border-style: none none double none;
-  border-color: #1B5D45;
+  border-color: #1b5d45;
   border-width: 5px;
   height: 120px;
   width: 350px;
@@ -15,7 +15,7 @@ const ProductsWordDiv = styled.div`
     height: 17vw;
     width: 50vw;
   }
-`
+`;
 
 const ProductsSection = styled.div`
   background-size: 100% 100%;
@@ -26,48 +26,79 @@ const ProductsSection = styled.div`
 
 const ProductsParagraph = styled.p`
   margin: 3vw 10vw 5vw 10vw !important;
-`
+`;
 const SCard = styled.div`
+  margin: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: centered;
   justify-content: centered;
-`
+`;
 const STitle = styled.h4`
   margin-left: auto;
   margin-right: auto;
-`
+`;
 const SPhoto = styled.img`
   margin-left: auto;
   margin-right: auto;
-`
+`;
 const SDescription = styled.p`
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
-`
+  text-align: center;
+`;
 
 function Products() {
   return (
     <ProductsSection>
-    <hr className="fade-in-hrdelay" />
+      <hr className="fade-in-hrdelay" />
       <ProductsWordDiv className="fade-in" />
-      <ProductsParagraph className="row fade-in-delay"> 
+      <ProductsParagraph className="row fade-in-delay">
         <a href="https://www.wpdispensary.com/">Link</a>
         <SCard className="col s3">
+          <hr className="fade-in-hrdelay" />
           <STitle>Title of products</STitle>
-          <SPhoto></SPhoto>
-          <SDescription>Small description</SDescription>
+          <SPhoto src="https://via.placeholder.com/150"></SPhoto>
+          <SDescription>
+            Small description Small description Small description Small
+            description Small description Small description Small description
+            Small description{" "}
+          </SDescription>
+          <hr className="fade-in-hrdelay" />
         </SCard>
         <SCard className="col s3">
+          <hr className="fade-in-hrdelay" />
           <STitle>Title of products</STitle>
-          <SPhoto></SPhoto>
-          <SDescription>Small description</SDescription>
+          <SPhoto src="https://via.placeholder.com/150"></SPhoto>
+          <SDescription>
+            Small description Small description Small description Small
+            description Small description Small description Small description
+            Small description{" "}
+          </SDescription>
+          <hr className="fade-in-hrdelay" />
         </SCard>
         <SCard className="col s3">
+          <hr className="fade-in-hrdelay" />
           <STitle>Title of products</STitle>
-          <SPhoto></SPhoto>
-          <SDescription>Small description</SDescription>
+          <SPhoto src="https://via.placeholder.com/150"></SPhoto>
+          <SDescription>
+            Small description Small description Small description Small
+            description Small description Small description Small description
+            Small description{" "}
+          </SDescription>
+          <hr className="fade-in-hrdelay" />
+        </SCard>
+        <SCard className="col s3">
+          <hr className="fade-in-hrdelay" />
+          <STitle>Title of products</STitle>
+          <SPhoto src="https://via.placeholder.com/150"></SPhoto>
+          <SDescription>
+            Small description Small description Small description Small
+            description Small description Small description Small description
+            Small description{" "}
+          </SDescription>
+          <hr className="fade-in-hrdelay" />
         </SCard>
       </ProductsParagraph>
     </ProductsSection>

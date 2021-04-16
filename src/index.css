@@ -5,7 +5,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+input {
+  font-size: 20px !important;
+  font-family: 'IM Fell English', serif !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -93,11 +96,6 @@ hr {
 
 .row .col.s4 {
   width: 35% !important;
-}
-
-/* Not working */
-.menu-icon:hover {
-  transform: translate(0, -10%);
 }
 
 /* Doesn't Exist */

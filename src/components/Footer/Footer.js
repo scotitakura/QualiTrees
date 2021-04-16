@@ -34,34 +34,52 @@ const StyledCopyright = styled.div`
   font-size: 0.7em !important;
 `;
 
+const SForm = styled.form`
+  margin: auto auto;
+  width: 70%;
+`
+const SInput = styled.input`
+
+  width: 70%
+`
+
 function Footer(props) {
   const { categories = [], setCurrentCategory, currentCategory } = props;
 
   function aboutClick() {
     setCurrentCategory({ name: "about", description: "About me page" });
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
   }
   function activateTerms() {
     setCurrentCategory({
       name: "termsConditions",
       description: "Terms and Conditions page",
     });
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
   }
   function activatePolicy() {
     setCurrentCategory({
       name: "privacyPolicy",
       description: "Privacy Policy page",
     });
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
   }
   return (
     <StyledFooter className="site-footer">
       <StyledFlexDiv className="container footer-media-adj">
         <StyledFlexItem className="footer-flex-adj">
-          <StyledP>Sign Up</StyledP>
+          <StyledP>Newsletter</StyledP>
           <hr />
           <p className="text-center">
-            Addresses/contact information, social media information, email
-            signup
+            Sign up here to receive our newsletter
           </p>
+          <SForm>
+            <SInput placeholder="Your Email" />
+            <SInput
+            type="submit"
+            value="Sign Up"
+            />
+          </SForm>
         </StyledFlexItem>
 
         <StyledFlexItem className="footer-flex-adj">

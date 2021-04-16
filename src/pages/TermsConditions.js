@@ -8,6 +8,8 @@ const TermsConditionsSection = styled.div`
   align-items: left;
 `;
 const TermsConditionsParagraph = styled.p`
+  text-align: justify;
+  text-justify: inter-word;
   margin: 3vw 10vw 10vw 10vw !important;
 `;
 
