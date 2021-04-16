@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PrivacyPolicySection = styled.div`
+  max-width: 100vw;
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -10,13 +11,14 @@ const PrivacyPolicySection = styled.div`
 const PrivacyPolicyParagraph = styled.p`
   text-align: justify;
   text-justify: inter-word;
+  overflow-wrap: break-word;
   margin: 3vw 10vw 10vw 10vw !important;
 `;
 
 function PrivacyPolicy() {
   return (
     <PrivacyPolicySection>
-    <hr className="fade-in-hrdelay" />
+      <hr className="fade-in-hrdelay" />
       <PrivacyPolicyParagraph className="fade-in-delay">
         QUALITREES PRIVACY POLICY
         <br></br>
@@ -42,12 +44,14 @@ function PrivacyPolicy() {
         <br></br>- “Cookies” are data files that are placed on your device or
         computer and often include an anonymous unique identifier. For more
         information about cookies, and how to disable cookies, visit&nbsp;
-        <a href="http://www.allaboutcookies.org" target="__blank">http://www.allaboutcookies.org</a>.<br></br>- “Log files” track actions
-        occurring on the Site, and collect data including your IP address,
-        browser type, Internet service provider, referring/exit pages, and
-        date/time stamps.<br></br>- “Web beacons,” “tags,” and “pixels” are
-        electronic files used to record information about how you browse the
-        Site.
+        <a href="http://www.allaboutcookies.org" target="__blank">
+          http://www.allaboutcookies.org
+        </a>
+        .<br></br>- “Log files” track actions occurring on the Site, and collect
+        data including your IP address, browser type, Internet service provider,
+        referring/exit pages, and date/time stamps.<br></br>- “Web beacons,”
+        “tags,” and “pixels” are electronic files used to record information
+        about how you browse the Site.
         <br></br>
         <br></br>
         Additionally when you make a purchase or attempt to make a purchase
@@ -81,13 +85,23 @@ function PrivacyPolicy() {
         your Personal Information, as described above. For example, we use
         Shopify to power our online store--you can read more about how Shopify
         uses your Personal Information here:&nbsp;
-        <a href="https://www.shopify.com/legal/privacy" target="__blank">https://www.shopify.com/legal/privacy</a>. We also use Google Analytics to
-        help us understand how our customers use the Site--you can read more
-        about how Google uses your Personal Information here:&nbsp;
-        <a href="https://www.google.com/intl/en/policies/privacy/" target="__blank">https://www.google.com/intl/en/policies/privacy/</a>. You can also opt-out
-        of Google Analytics here:&nbsp;
-        <a href="https://tools.google.com/dlpage/gaoptout" target="__blank">https://tools.google.com/dlpage/gaoptout</a>.
-        <br></br>
+        <a href="https://www.shopify.com/legal/privacy" target="__blank">
+          https://www.shopify.com/legal/privacy
+        </a>
+        . We also use Google Analytics to help us understand how our customers
+        use the Site--you can read more about how Google uses your Personal
+        Information here:&nbsp;
+        <a
+          href="https://www.google.com/intl/en/policies/privacy/"
+          target="__blank"
+        >
+          https://www.google.com/intl/en/policies/privacy/
+        </a>
+        . You can also opt-out of Google Analytics here:&nbsp;
+        <a href="https://tools.google.com/dlpage/gaoptout" target="__blank">
+          https://tools.google.com/dlpage/gaoptout
+        </a>
+        .<br></br>
         <br></br>
         Finally, we may also share your Personal Information to comply with
         applicable laws and regulations, to respond to a subpoena, search
