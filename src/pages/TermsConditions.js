@@ -10,7 +10,7 @@ const TermsConditionsSection = styled.div`
 const TermsConditionsParagraph = styled.p`
   text-align: justify;
   text-justify: inter-word;
-  margin: 3vw 10vw 10vw 10vw !important;
+  margin: 3vw 9vw 10vw 9vw !important;
 `;
 
 function TermsConditions() {

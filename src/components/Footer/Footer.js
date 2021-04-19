@@ -32,15 +32,15 @@ const StyledFlexItem = styled.div`
 const StyledCopyright = styled.div`
   text-align: right;
   font-size: 0.7em !important;
+  margin: 0 5px;
 `;
 
 const SForm = styled.form`
   margin: auto auto;
-  width: 70%;
+  width: 13vw;
 `
 const SInput = styled.input`
-
-  width: 70%
+  width: 13vw;
 `
 
 function Footer(props) {
@@ -74,10 +74,13 @@ function Footer(props) {
             Sign up here to receive our newsletter
           </p>
           <SForm>
-            <SInput placeholder="Your Email" />
+            <SInput type="text" placeholder="Your Email" 
+            
+            width="3" />
             <SInput
             type="submit"
             value="Sign Up"
+            width="3"
             />
           </SForm>
         </StyledFlexItem>

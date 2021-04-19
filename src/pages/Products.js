@@ -41,6 +41,7 @@ const STitle = styled.h4`
 const SPhoto = styled.img`
   margin-left: auto;
   margin-right: auto;
+  height: 20vw;
 `;
 const SDescription = styled.p`
   margin-left: auto;
@@ -54,8 +55,10 @@ function Products() {
     <ProductsSection>
       <hr className="fade-in-hrdelay" />
       <ProductsWordDiv className="fade-in" />
-      <ProductsParagraph className="row fade-in-delay">
+      <SDescription>
         <a href="https://www.wpdispensary.com/">Link</a>
+      </SDescription>
+      <ProductsParagraph className="row fade-in-delay">
         <SCard className="col s3">
           <hr className="fade-in-hrdelay" />
           <STitle>Title of products</STitle>

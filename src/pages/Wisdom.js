@@ -25,8 +25,6 @@ const WisdomSection = styled.div`
 `;
 
 const WisdomParagraph = styled.p`
-  text-align: justify;
-  text-justify: inter-word;
   margin: 3vw 10vw 15vw 10vw !important;
 `
 
